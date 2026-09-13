@@ -1,0 +1,17 @@
+flow_count
+bytes_sent
+bytes_received
+unique_destinations
+unique_destination_ports
+new_peers
+syn_ratio
+rst_ratio
+mean_packet_size
+iat_mean
+iat_variance
+fan_out
+active_hosts
+total_flows
+total_bytes
+new_peer_rate
+network_fanout

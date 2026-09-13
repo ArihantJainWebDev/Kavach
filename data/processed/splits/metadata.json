@@ -1,0 +1,12 @@
+{
+  "total_samples": 54697,
+  "train_samples": 38287,
+  "validation_samples": 8205,
+  "test_samples": 8205,
+  "train_fraction": 0.7,
+  "validation_fraction": 0.15,
+  "test_fraction": 0.15,
+  "split_strategy": "chronological",
+  "scaler_fit_on": "training_observation_windows_only",
+  "n_features": 17
+}

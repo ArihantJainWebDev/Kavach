@@ -1,0 +1,54 @@
+{
+  "source_states": "C:\\Users\\agraw\\Documents\\unraveled_forecasting_prototype\\unraveled_forecasting_prototype\\data\\processed\\filtered\\states_filtered.parquet",
+  "source_labels": "C:\\Users\\agraw\\Documents\\unraveled_forecasting_prototype\\unraveled_forecasting_prototype\\data\\processed\\filtered\\labels_filtered.parquet",
+  "feature_columns": [
+    "flow_count",
+    "bytes_sent",
+    "bytes_received",
+    "unique_destinations",
+    "unique_destination_ports",
+    "new_peers",
+    "syn_ratio",
+    "rst_ratio",
+    "mean_packet_size",
+    "iat_mean",
+    "iat_variance",
+    "fan_out",
+    "active_hosts",
+    "total_flows",
+    "total_bytes",
+    "new_peer_rate",
+    "network_fanout"
+  ],
+  "feature_count": 17,
+  "windows": {
+    "short": 5,
+    "medium": 10,
+    "long": 30
+  },
+  "target_count": 54697,
+  "label_column": "stage",
+  "class_to_id": {
+    "Benign": 0,
+    "Cover up": 1,
+    "Data Exfiltration": 2,
+    "Establish Foothold": 3,
+    "Lateral Movement": 4,
+    "Reconnaissance": 5,
+    "Unknown": 6
+  },
+  "id_to_class": {
+    "0": "Benign",
+    "1": "Cover up",
+    "2": "Data Exfiltration",
+    "3": "Establish Foothold",
+    "4": "Lateral Movement",
+    "5": "Reconnaissance",
+    "6": "Unknown"
+  },
+  "timeline_frequency": "1min",
+  "missing_minute_fill": 0.0,
+  "window_alignment": "right-aligned-at-target-timestamp",
+  "target_timestamps_are_filtered_rows": true,
+  "longest_history_minutes": 30
+}

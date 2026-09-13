@@ -1,0 +1,8 @@
+streamlit>=1.36
+pandas>=2.0
+numpy>=1.26
+scikit-learn>=1.4
+torch>=2.2
+plotly>=5.20
+fastapi>=0.110
+uvicorn>=0.29

@@ -1,0 +1,95 @@
+{
+  "source_states": "C:\\Users\\agraw\\Documents\\unraveled_forecasting_prototype\\unraveled_forecasting_prototype\\data\\processed\\filtered\\states_filtered.parquet",
+  "source_labels": "C:\\Users\\agraw\\Documents\\unraveled_forecasting_prototype\\unraveled_forecasting_prototype\\data\\processed\\filtered\\labels_filtered.parquet",
+  "output_directory": "C:\\Users\\agraw\\Documents\\unraveled_forecasting_prototype\\unraveled_forecasting_prototype\\data\\processed\\windows\\semantic",
+  "timestamp_column": null,
+  "timestamp_mode": "row_position_preserving_existing_order",
+  "stage_column": "stage",
+  "feature_columns": [
+    "flow_count",
+    "bytes_sent",
+    "bytes_received",
+    "unique_destinations",
+    "unique_destination_ports",
+    "new_peers",
+    "syn_ratio",
+    "rst_ratio",
+    "mean_packet_size",
+    "iat_mean",
+    "iat_variance",
+    "fan_out",
+    "active_hosts",
+    "total_flows",
+    "total_bytes",
+    "new_peer_rate",
+    "network_fanout"
+  ],
+  "feature_count": 17,
+  "number_of_input_rows": 54726,
+  "number_of_samples": 54697,
+  "window_lengths": {
+    "short": 5,
+    "medium": 10,
+    "long": 30
+  },
+  "window_alignment": "right_aligned_at_target_index",
+  "rollout_horizon": 10,
+  "rollout_start": "one_row_after_current_target",
+  "rollout_padding_value": -1,
+  "stage_to_id": {
+    "Benign": 0,
+    "Cover up": 1,
+    "Data Exfiltration": 2,
+    "Establish Foothold": 3,
+    "Lateral Movement": 4,
+    "Reconnaissance": 5,
+    "Unknown": 6
+  },
+  "id_to_stage": {
+    "0": "Benign",
+    "1": "Cover up",
+    "2": "Data Exfiltration",
+    "3": "Establish Foothold",
+    "4": "Lateral Movement",
+    "5": "Reconnaissance",
+    "6": "Unknown"
+  },
+  "array_shapes": {
+    "observation_windows": [
+      54697,
+      30,
+      17
+    ],
+    "medium_context_windows": [
+      54697,
+      10,
+      17
+    ],
+    "short_context_windows": [
+      54697,
+      5,
+      17
+    ],
+    "target_features": [
+      54697,
+      17
+    ],
+    "target_stage_ids": [
+      54697
+    ],
+    "rollout_stage_ids": [
+      54697,
+      10
+    ],
+    "rollout_valid_mask": [
+      54697,
+      10
+    ],
+    "target_timestamps": [
+      54697
+    ],
+    "target_indices": [
+      54697
+    ]
+  }
+}

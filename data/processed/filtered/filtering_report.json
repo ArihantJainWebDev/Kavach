@@ -1,0 +1,57 @@
+{
+  "source": {
+    "states": "C:\\Users\\agraw\\Documents\\unraveled_forecasting_prototype\\unraveled_forecasting_prototype\\data\\processed\\states\\states.parquet",
+    "labels": "C:\\Users\\agraw\\Documents\\unraveled_forecasting_prototype\\unraveled_forecasting_prototype\\data\\processed\\states\\labels.parquet"
+  },
+  "output": {
+    "states": "C:\\Users\\agraw\\Documents\\unraveled_forecasting_prototype\\unraveled_forecasting_prototype\\data\\processed\\filtered\\states_filtered.parquet",
+    "labels": "C:\\Users\\agraw\\Documents\\unraveled_forecasting_prototype\\unraveled_forecasting_prototype\\data\\processed\\filtered\\labels_filtered.parquet"
+  },
+  "input_shape": {
+    "states": [
+      56041,
+      17
+    ],
+    "labels": [
+      56041,
+      5
+    ]
+  },
+  "layers": {
+    "layer_1_data_quality": {
+      "initial_rows": 56041,
+      "removed_rows": 0,
+      "remaining_rows": 56041,
+      "removed_invalid_timestamps": 0,
+      "removed_non_finite_rows": 0,
+      "removed_negative_value_rows": 0,
+      "removed_invalid_ratio_rows": 0
+    },
+    "layer_2_behavioural_relevance": {
+      "initial_rows": 56041,
+      "remaining_rows": 54726,
+      "removed_rows": 1315,
+      "known_attack_rows": 15589,
+      "active_rows": 54716,
+      "behaviour_change_rows": 38645,
+      "transition_context_rows": 6592,
+      "retention_rate": 0.976535
+    },
+    "layer_3_forecast_readiness": {
+      "lookback": 10,
+      "total_rows": 54726,
+      "forecast_ready_rows": 54717,
+      "warmup_rows": 9
+    }
+  },
+  "final_shape": {
+    "states": [
+      54726,
+      19
+    ],
+    "labels": [
+      54726,
+      5
+    ]
+  }
+}

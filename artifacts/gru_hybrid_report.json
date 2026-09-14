@@ -1,0 +1,40 @@
+{
+  "device": "cpu",
+  "best_next_stage_val_macro_f1": 0.1851216833387901,
+  "best_transition_val_f1": 0.04219409282700422,
+  "selected_threshold": 0.85,
+  "validation_threshold_search": {
+    "threshold": 0.85,
+    "stage_metrics": {
+      "accuracy": 0.9965874466788543,
+      "balanced_accuracy": 0.7527481859810191,
+      "macro_f1": 0.7527481859810191,
+      "weighted_f1": 0.9965874466788543
+    },
+    "transition_metrics": {
+      "transition_accuracy": 0.9965874466788543,
+      "transition_balanced_accuracy": 0.5,
+      "transition_f1": 0.0
+    },
+    "predicted_transition_rate": 0.0
+  },
+  "test_hybrid_stage_metrics": {
+    "accuracy": 0.856045831301804,
+    "balanced_accuracy": 0.7664941104202921,
+    "macro_f1": 0.6572069094658995,
+    "weighted_f1": 0.8568260116457577
+  },
+  "test_hybrid_transition_metrics": {
+    "transition_accuracy": 0.8498293515358362,
+    "transition_balanced_accuracy": 0.5012286727185288,
+    "transition_f1": 0.02531645569620253
+  },
+  "test_persistence_metrics": {
+    "accuracy": 0.8575085324232082,
+    "balanced_accuracy": 0.7669506271972836,
+    "macro_f1": 0.7669278975930397,
+    "weighted_f1": 0.857506592263898
+  },
+  "actual_test_transition_rate": 0.14249147474765778,
+  "predicted_test_transition_rate": 0.011579717211116529
+}

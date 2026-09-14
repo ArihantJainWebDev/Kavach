@@ -3,6 +3,12 @@ venv/
 env/
 ENV/
 
+# Local Streamlit state and user-specific editor files.
+.streamlit/
+.vscode/settings.json
+.vscode/launch.json
+.vscode/tasks.json
+
 __pycache__/
 *.py[cod]
 *$py.class
@@ -12,7 +18,12 @@ __pycache__/
 .coverage
 htmlcov/
 
+# Local test, notebook, and profiling output.
+.hypothesis/
 .ipynb_checkpoints/
+*.prof
+*.pstats
+
 .DS_Store
 Thumbs.db
 
@@ -27,13 +38,30 @@ data/processed/**/*.npy
 data/processed/**/*.npz
 data/processed/**/*.parquet
 data/processed/**/*.pkl
+data/processed/states/
+data/processed/transition_balanced/
+data/processed/windows/
 *.pt
 *.pth
 *.ckpt
 *.onnx
 
+# Local experiment checkpoints and exports.
+artifacts/*.pt
+artifacts/*.pth
+artifacts/*.ckpt
+artifacts/*.onnx
+artifacts/*.pkl
+
 # Local build and tooling output.
 dist/
 build/
 *.egg-info/
-.vscode/settings.json
+
+# Temporary copies made while iterating on the Streamlit app.
+app/*_backup.py
+app/*_before_polish.py
+*.bak
+*.tmp
+*.swp
+*~
